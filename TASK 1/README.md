@@ -66,9 +66,28 @@ Next, assign ownership of the directory with your current system user:
 Then, create and open a new configuration file in Apache’s sites-available directory using your preferred command-line editor.
 sudo vi /etc/apache2/sites-available/projectlamp.conf
 
+![alt text](image-7.png)
 
-You can now use a2ensite command to enable the new virtual host:
-sudo a2ensite projectlamp
+Now go to your browser and try to open your website URL using IP address:
+http://16.16.252.83:80
+
+![alt text](image-8.png)
+
+## ENABLE PHP ON THE WEBSITE
+Change the default directory setting on Apache from index.html to index.php:
+sudo vim /etc/apache2/mods-enabled/dir.conf
+
+![alt text](image-10.png)
+
+Create a new file named index.php inside your custom web root folder using:
+vim /var/www/projectlamp/index.php
+
+![alt text](image-11.png)
+
+When you are finished, save and close the file, refresh the page and you will see:
+
+![alt text](image-12.png)
+
 
 
 
